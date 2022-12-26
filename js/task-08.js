@@ -17,6 +17,6 @@ function onFormSubmit(event) {
       email: (formElements.email.name = emailInputValue),
       password: (formElements.password.name = passwordInputValue),
     });
-    form.reset();
+    event.currentTarget.reset();
   }
 }

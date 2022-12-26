@@ -3,12 +3,13 @@ const createBtn = document.querySelector('button[data-create]');
 const destroyBtn = document.querySelector('button[data-destroy]');
 const boxesWrapEl = document.getElementById('boxes');
 
-createBtn.addEventListener('click', createBoxes);
+createBtn.addEventListener('click', () => {
+  createBoxes(inputEl.value);
+});
 
 destroyBtn.addEventListener('click', destroyBoxes);
 
-function createBoxes() {
-  const amount = inputEl.value;
+function createBoxes(amount) {
   const boxes = [];
   let boxWidth = 30;
   let boxHeight = 30;
